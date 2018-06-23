@@ -1,8 +1,9 @@
-package com.umeng.soexample;
+package com.mx.browser;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,36 +30,37 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     private void initView() {
-        mAnalyticsButton = (Button) findViewById(R.id.um_analytics_entrance);
-        mAnalyticsButton.setOnClickListener(this);
+//        mAnalyticsButton = (Button) findViewById(R.id.um_analytics_entrance);
+//        mAnalyticsButton.setOnClickListener(this);
         mPushButton = (Button) findViewById(R.id.um_push_entrance);
         mPushButton.setOnClickListener(this);
-        mShareButton = (Button) findViewById(R.id.um_share_entrance);
-        mShareButton.setOnClickListener(this);
-        mErrorButton = (Button) findViewById(R.id.um_error_entrance);
-        mErrorButton.setOnClickListener(this);
+//        mShareButton = (Button) findViewById(R.id.um_share_entrance);
+//        mShareButton.setOnClickListener(this);
+//        mErrorButton = (Button) findViewById(R.id.um_error_entrance);
+//        mErrorButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         int id = view.getId();
         switch (id) {
-            case R.id.um_analytics_entrance:
+//            case R.id.um_analytics_entrance:
 //                Intent intentCommon = new Intent(MainActivity.this, AnalyticsMainActivity.class);
 //                MainActivity.this.startActivity(intentCommon);
-                break;
+//                break;
             case R.id.um_push_entrance:
-                Intent intentAnalytics = new Intent(MainActivity.this, com.umeng.message.example.SplashTestActivity.class);
+                Intent intentAnalytics = new Intent(MainActivity.this, com.mx.browser.push.MainActivity.class);
                 MainActivity.this.startActivity(intentAnalytics);
                 break;
-            case R.id.um_share_entrance:
+//            case R.id.um_share_entrance:
 //                Intent intentShare = new Intent(MainActivity.this, HomeActivity.class);
 //                MainActivity.this.startActivity(intentShare);
-                break;
-            case R.id.um_error_entrance:
+//                break;
+//            case R.id.um_error_entrance:
 //                Intent intentError = new Intent(MainActivity.this, ErrorActivity.class);
 //                MainActivity.this.startActivity(intentError);
-                break;
+//                break;
         }
     }
 }
+

@@ -1,4 +1,3 @@
-
 //include ':app', ':PushSDK', ':UMCommon', ':ShareSDK'
 //include':socialize_commonlibs',':sdk',':umeng_social_tool',':umeng_social_shareview',':fakev4',':umeng_social_shareboard',':umeng_social_api',':ShareSource_wx_simple',':ShareSource_qq_simple',':ShareSource_sina_simple'
 //project(':UMCommon').projectDir = new File(settingsDir, '../../UMCommon-Android/UMCommon')
@@ -14,5 +13,5 @@
 //project(':ShareSource_sina_simple').projectDir = new File(settingsDir, '../../UMSocial_Android/umeng_android_socialize/socialnetwork/socialize_sina_simple')
 //project(':fakev4').projectDir = new File(settingsDir, '../../UMSocial_Android/umeng_android_socialize/fakev4')
 
-include ':app', ':PushSDK', ':ShareSDK'
+include ':app', ':PushSDK', ':ShareSDK', ':mx'
 //project(':UMCommon').projectDir = new File(settingsDir, '../UMCommon-Android/UMCommon')

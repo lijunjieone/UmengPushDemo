@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.mx.browser">
+
+    <application android:allowBackup="true" android:icon="@mipmap/ic_launcher"
+        android:name=".CommonApplication"
+        android:label="@string/app_name" android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <!-- push start -->
+        <activity android:name="com.mx.browser.push.SplashTestActivity"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name="com.mx.browser.push.MainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <service android:name="com.mx.browser.push.NotificationService" />
+        <service android:name="com.mx.browser.push.MyPushIntentService" />
+        <service android:name="com.mx.browser.push.UmengNotificationService" />
+        <service android:name="com.mx.browser.push.MyNotificationService" />
+
+        <receiver android:name="com.mx.browser.push.NotificationBroadcast" />
+        <!-- push end -->
+
+    </application>
+
+</manifest>

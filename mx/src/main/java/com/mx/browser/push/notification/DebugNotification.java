@@ -1,14 +1,16 @@
-package com.umeng.message.example.notification;
-
-import java.security.MessageDigest;
+package com.mx.browser.push.notification;
 
 import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
+
 import com.umeng.message.MessageSharedPrefs;
 import com.umeng.message.util.HttpRequest;
+
 import org.json.JSONObject;
+
+import java.security.MessageDigest;
 
 /**
  * Created by wupan on 16/10/24.
@@ -23,7 +25,7 @@ public class DebugNotification {
      */
     public static void transmission(final Context mContext, final Handler handler) {
         try {
-            final AndroidUnicast unicast = new AndroidUnicast("59892f08310c9307b60023d0", "xkqdlqwgkglgfdydyawb16etxilvmy3g");
+            final AndroidUnicast unicast = new AndroidUnicast("57ecb52de0f55acfc2002e61", "971c14aff11d62275376b35cf652323a");
             unicast.setDeviceToken(MessageSharedPrefs.getInstance(mContext).getDeviceToken());
             unicast.setTicker("Android unicast ticker");
             unicast.setTitle("Title");
@@ -63,7 +65,9 @@ public class DebugNotification {
                 .send(postBody).body("UTF-8");
         JSONObject responseJson = new JSONObject(response);
         String ret = responseJson.getString("ret");
+
         Log.e("ret","ret="+ret+",str="+responseJson.toString());
+
         if (!ret.equalsIgnoreCase("SUCCESS")) {
             handler.post(new Runnable() {
                 @Override
