@@ -7,6 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.umeng.message.IUmengCallback;
+import com.umeng.message.PushAgent;
 
 public class MainActivity extends Activity implements View.OnClickListener {
 
@@ -49,8 +53,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //                MainActivity.this.startActivity(intentCommon);
 //                break;
             case R.id.um_push_entrance:
-                Intent intentAnalytics = new Intent(MainActivity.this, com.mx.browser.push.MainActivity.class);
-                MainActivity.this.startActivity(intentAnalytics);
+                PushAgent.getInstance(this).disable(new IUmengCallback() {
+                    @Override
+                    public void onSuccess() {
+                        Toast.makeText(getApplication(),"disable success!",Toast.LENGTH_SHORT).show();
+
+                    }
+
+                    @Override
+                    public void onFailure(String s, String s1) {
+                        Toast.makeText(getApplication(),"disable success!,+1"+s+",s2="+s1,Toast.LENGTH_SHORT).show();
+                    }
+                });
+//                Intent intentAnalytics = new Intent(MainActivity.this, com.mx.browser.push.MainActivity.class);
+//                MainActivity.this.startActivity(intentAnalytics);
                 break;
 //            case R.id.um_share_entrance:
 //                Intent intentShare = new Intent(MainActivity.this, HomeActivity.class);

@@ -16,19 +16,19 @@
 
 
         <!-- push start -->
-        <activity android:name="com.mx.browser.push.SplashTestActivity"
-            android:screenOrientation="portrait"
-             />
+        <!--<activity android:name="com.mx.browser.push.SplashTestActivity"-->
+            <!--android:screenOrientation="portrait"-->
+             <!--/>-->
         <activity
             android:name="com.mx.browser.push.MainActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
 
-        <service android:name="com.mx.browser.push.NotificationService" />
-        <service android:name="com.mx.browser.push.MyPushIntentService" />
-        <service android:name="com.mx.browser.push.UmengNotificationService" />
-        <service android:name="com.mx.browser.push.MyNotificationService" />
+        <!--<service android:name="com.mx.browser.push.NotificationService" />-->
+        <!--<service android:name="com.mx.browser.push.MyPushIntentService" />-->
+        <!--<service android:name="com.mx.browser.push.UmengNotificationService" />-->
+        <!--<service android:name="com.mx.browser.push.MyNotificationService" />-->
 
-        <receiver android:name="com.mx.browser.push.NotificationBroadcast" />
+        <!--<receiver android:name="com.mx.browser.push.NotificationBroadcast" />-->
         <!-- push end -->
 
     </application>
